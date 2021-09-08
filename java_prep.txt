@@ -9,6 +9,13 @@ springboot启动流程(链接：https://blog.csdn.net/chengbinbbs/article/detail
 2.第二步实现了应用具体的启动方案,执行run方法,主要就是计时、启动监听、配置应用环境、打印banner图形、创建并配置spring容器这些；
 3.第二步中的refreshContext做了加载spring.factories、实例化bean等核心工作，是实现mybatis、redis等starter自动化配置的关键；主要是通过EnableAutoConfiguration注解关联的EnableAutoConfigurationImportSelector类中的selectImports()，来调用SpringFactoriesLoader.loadFactoryNames()获取到所有spring.factories文件中的类全限定名后再反射加载。
 
+springcloud:
+是一系列框架的有序集合,本质上是一个简单易懂,易维护,易部署的分布式系统开发工具包。
+进行SpringBoot风格的再封装屏蔽调复杂的配置和实现原理,简化了如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等分布式系统基础设施的开发。
+
+
+
+
 redis,
 
 kafka,
